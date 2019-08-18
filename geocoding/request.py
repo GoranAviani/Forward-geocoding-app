@@ -25,12 +25,12 @@ def make_request(**kwargs):
         return ({"testing_apis": "The API endpoint for te API is missing"})
 
     try:
-        data1 = kwargs["data1"]
-        result = requests.get(fullAPIUrl, data=json.dumps(data1))
+        params1 = kwargs["params1"]
+        result = requests.get(fullAPIUrl, params=params1)
     except:
         return ({"testing_api": "Missing API data"})
 
-    
+
     if result.status_code in (400, 401, 402, 403, 404):
         return result
 
