@@ -11,4 +11,6 @@ params =  {"params1":{'key': my_key,
 result = make_request(**apiUrl, **apiEndpoint, **params)
 print(result)
 
+print(result[0]["lat"])
+print(result[0]["lon"])
 
